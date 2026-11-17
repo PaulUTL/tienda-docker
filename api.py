@@ -10,7 +10,7 @@ class Compra(BaseModel):
 
 @app.get("/")
 def inicio():
-    return {"mensaje": "Tienda DevOps 2.0"}
+    return {"mensaje": "Tienda DevOps 1.0"}
 
 @app.post("/compra")
 def calcular_compra(compra: Compra):
@@ -35,3 +35,8 @@ def calcular_compra(compra: Compra):
         "subtotal": round(subtotal, 2),
         "total": total
     }
+
+@app.get("/version")
+def obtener_version():
+    return {"aplicación": "Tienda DevOps",
+            "version": "1.0.0"}
