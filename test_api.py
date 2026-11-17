@@ -31,4 +31,9 @@ def test_calcular_compra_descuento_invalido():
 def test_version():
     respuesta = client.get("/version")
     assert respuesta.status_code == 200
-    assert respuesta.json()["version"] == "1.0.0"
+    assert respuesta.json()["version"] == "1.1.0"
+
+def test_revision():
+    respuesta = client.get("/revision")
+    assert respuesta.status_code == 200
+    assert respuesta.json()["estado"] == "ok"
