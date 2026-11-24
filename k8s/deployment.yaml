@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: tienda
-          image: tienda-api:1.0
+          image: tienda-api:1.0.0
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8000
